@@ -16,8 +16,7 @@ export const fetchGifs = async (query: string): Promise<IGiphyResponse> => {
 
 // Custom hook using useQuery to fetch GIFs
 export const useSearchGifs = (query: string) => {
-  return useQuery(['searchGifs', query], () => fetchGifs(query), {
-    // Only perform the query if a query is provided
+  return useQuery<IGiphyResponse, Error>(['searchGifs', query], () => fetchGifs(query), {
     enabled: query !== '',
   });
 };
