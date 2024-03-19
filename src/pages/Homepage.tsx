@@ -1,6 +1,10 @@
+import { SearchBar } from '../components/SearchBar';
+
 
 export const Homepage = () => {
   return (
-    <div>Homepage</div>
+    <div>
+      <SearchBar/>
+    </div>
   )
 }
