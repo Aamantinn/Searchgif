@@ -1,13 +1,17 @@
 // GifList.tsx
 import React from "react";
 import { IGif } from "../types/types";
+import { useFavorites } from "../hooks/useFavorite"; // Adjust the import path as necessary
 
 interface GifListProps {
   gifs: IGif[];
- 
 }
 
 export const GifList: React.FC<GifListProps> = ({ gifs }) => {
+  const { addFavorite, removeFavorite, favorites } = useFavorites();
+
+  const isFavorite = (gifId: string) => favorites.some(favorite => favorite.id === gifId);
+
   return (
     <div className="grid md:grid-cols-4 sm:grid-cols-2 gap-2 p-10">
       {gifs.map((gif) => (
@@ -19,9 +23,9 @@ export const GifList: React.FC<GifListProps> = ({ gifs }) => {
           />
           <button
             className="absolute bottom-0 left-0 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-           
+            onClick={() => isFavorite(gif.id) ? removeFavorite(gif.id) : addFavorite(gif)}
           >
-            Favorite
+            {isFavorite(gif.id) ? 'Unfavorite' : 'Favorite'}
           </button>
         </div>
       ))}
