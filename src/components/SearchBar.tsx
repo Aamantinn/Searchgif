@@ -28,11 +28,12 @@ export const SearchBar: React.FC<Props> = ({ setQuery }) => {
     };
 
     return (
-        <div className="flex flex-col">
+        <div className="flex flex-col items-center pt-8">
+          <h1 className="text-xl font-semibold">Search Gifs</h1>
         <form className="flex flex-col md:flex-row w-full p-10  gap-4" onSubmit={handleSubmit(onSubmit)}>
-            <input className="w-full px-2 py-2 border-2 rounded-md" {...register("query")} placeholder="Search GIFs" />
+            <input className=" px-2 w-full py-2 border-neutral-200 border-2 rounded-md" {...register("query")} placeholder="Search GIFs" />
             
-            <button className="px-8 py-3  font-semibold rounded-md text-white text-lg bg-blue-500 hover:bg-blue-700" type="submit">Search</button>
+            <button className="px-8  py-3 font-semibold rounded-md text-white text-lg bg-blue-500 hover:bg-blue-700" type="submit">Search</button>
         </form>
         {errors.query && <p className="text-center text-red-600 font-semibold">{errors.query.message}</p>}
         </div>
