@@ -18,10 +18,6 @@ export const FavoritesProvider: React.FC<FavoritesProviderProps> = ({ children }
   const [favorites, setFavorites] = useState<IGif[]>([]);
 
   useEffect(() => {
-    console.log(favorites); // Log to see if favorites update as expected
-  }, [favorites]);
-
-  useEffect(() => {
     const storedFavorites = JSON.parse(localStorage.getItem('favorites') || '[]');
     setFavorites(storedFavorites);
   }, []);
