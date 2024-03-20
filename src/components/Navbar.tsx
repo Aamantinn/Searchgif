@@ -16,12 +16,12 @@ export const Navbar = () => {
         </div>
         <div className="flex items-center gap-5">
           <Link to={`/`}>
-            <span className={`flex uppercase flex-row items-center gap-2 text-base font-bold text-white no-underline ${isActive('/') ? 'bg-blue-700 ' : ''} hover:bg-blue-600 p-2 rounded`}>
+            <span className={`flex uppercase flex-row items-center gap-2 text-base font-bold text-white no-underline ${isActive('/') ? 'bg-blue-700 ' : ''} hover:bg-blue-600 px-2 py-1 rounded`}>
               Search
             </span>
           </Link>
           <Link to={`/favorite`}>
-            <span className={`flex uppercase flex-row items-center gap-2 text-base font-bold text-white no-underline ${isActive('/favorite') ? 'bg-blue-700' : ''} hover:bg-blue-600 p-2 rounded`}>
+            <span className={`flex uppercase flex-row items-center gap-2 text-base font-bold text-white no-underline ${isActive('/favorite') ? 'bg-blue-700' : ''} hover:bg-blue-600 px-2 py-1 rounded`}>
               Favorites
             </span>
           </Link>
