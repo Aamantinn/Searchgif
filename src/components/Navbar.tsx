@@ -1,4 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
+import logo from "../assets/GIPHY Transparent 27px.png";
 
 export const Navbar = () => {
   const location = useLocation(); 
@@ -11,7 +12,7 @@ export const Navbar = () => {
       <div className="flex w-full justify-between">
         <div className="flex items-center">
           <Link to={`/`}>
-            <img className="w-28 " src={`${process.env.PUBLIC_URL}/assets/GIPHY Transparent 27px.png`} alt="Logo" />
+            <img className="w-28 " src={logo} alt="Logo" />
           </Link>
         </div>
         <div className="flex items-center gap-4">
