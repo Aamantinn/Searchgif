@@ -13,7 +13,8 @@ export const GifList: React.FC<GifListProps> = ({ gifs }) => {
   const isFavorite = (gifId: string) => favorites.some(favorite => favorite.id === gifId);
 
   return (
-    <div className="grid md:grid-cols-4 sm:grid-cols-2 gap-2 p-5 md:p-10">
+    <div>
+    <div className="grid md:grid-cols-4 h-fit sm:grid-cols-2 gap-2 p-5 md:p-10">
       {gifs.map((gif) => (
         <div key={gif.id} className="w-full h-48 overflow-hidden relative">
           <img
@@ -22,7 +23,7 @@ export const GifList: React.FC<GifListProps> = ({ gifs }) => {
             alt={gif.title}
           />
           <button
-  className="absolute bottom-2 left-2 bg-neutral-300 hover:bg-neutral-400 text-blue-700 font-bold p-1 rounded-full flex items-center justify-center"
+  className="absolute bottom-2 left-2 bg-slate-300 hover:bg-slate-100 text-blue-700 font-bold p-1 rounded-full flex items-center justify-center"
   onClick={() => isFavorite(gif.id) ? removeFavorite(gif.id) : addFavorite(gif)}
   aria-label={isFavorite(gif.id) ? 'Remove from favorites' : 'Add to favorites'}
 >
@@ -35,6 +36,6 @@ export const GifList: React.FC<GifListProps> = ({ gifs }) => {
 
         </div>
       ))}
-    </div>
+    </div></div>  
   );
 };
