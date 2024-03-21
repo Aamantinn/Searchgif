@@ -29,7 +29,7 @@ export const SearchBar: React.FC<Props> = ({ setQuery }) => {
 
     return (
         <div className="flex flex-col items-center pt-8">
-          <h1 className="text-xl font-semibold">Search Gifs</h1>
+          <h1 className="text-xl font-semibold">Search GIFs</h1>
         <form className="flex flex-col md:flex-row w-full p-5 md:p-10  gap-4" onSubmit={handleSubmit(onSubmit)}>
             <input className=" px-2 w-full py-2 border-neutral-200 border-2 rounded-md" {...register("query")} placeholder="Search GIFs" />
             
