@@ -1,7 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 
 export const Navbar = () => {
-  const location = useLocation(); // Current location
+  const location = useLocation(); 
 
   // Function to determine if the link is active
   const isActive = (pathname: string) => location.pathname === pathname;
@@ -14,7 +14,7 @@ export const Navbar = () => {
             <img className="w-28 " src="src\assets\GIPHY Transparent 27px.png" alt="Logo" />
           </Link>
         </div>
-        <div className="flex items-center gap-5">
+        <div className="flex items-center gap-4">
           <Link to={`/`}>
             <span className={`flex uppercase flex-row items-center gap-2 text-base font-bold text-white no-underline ${isActive('/') ? 'bg-blue-700 ' : ''} hover:bg-blue-600 px-2 py-1 rounded`}>
               Search
