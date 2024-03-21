@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import { Homepage } from "./pages/Homepage";
 import { FavoriteGif } from "./pages/FavoriteGif";
-import { FavoritesProvider } from "./context/FavoritesContext"; // Adjust the import path as necessary
+import { FavoritesProvider } from "./context/FavoritesContext"; 
 import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/Footer";
 
