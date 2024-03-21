@@ -1,30 +1,35 @@
-# React + TypeScript + Vite
+# Giphy Search Tool
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The Giphy Search Tool is a web application that allows users to search for GIFs using the Giphy API. Users can mark their favorite GIFs for easy access and manage their favorites list by adding or removing GIFs.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Search Functionality**: Utilizes the Giphy API to search for GIFs.
+- **Favorites List**: Users can mark GIFs as favorites and view them in a dedicated favorites list.
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Technologies Used
 
-- Configure the top-level `parserOptions` property like this:
+- React.ts
+- State Management Library (Context API)
+- React Query
+- React Hook Form + Yup
+- Tailwind
+- `react-router-dom` for routing.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+## Getting Started
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### Prerequisites
+
+Ensure you have the following installed:
+- Node.js (latest stable version)
+- npm (comes with Node.js)
+
+### Installation
+
+1. Install dependencies:
+npm install
+
+2. Start the development server:
+npm run dev
+
